@@ -11,12 +11,12 @@ import java.io.OutputStreamWriter
 import java.util.*
 
 class AndroidLogger {
-    fun logger(androidLogger: AndroidLogger, message: String, applicationContext: Application) {
+    fun logger(message: String, applicationContext: Application) {
         val threadId = Thread.currentThread().id
         val currentTime = Calendar.getInstance().time
         val logMessage = "Thread id: $threadId\tLog time: $currentTime\tMessage: $message\n"
         Log.d("AndroidLogger", logMessage)
-        androidLogger.writeFile(message, applicationContext)
+        writeFile(message, applicationContext)
     }
 
     private fun writeFile(message: String, applicationContext: Application) {
