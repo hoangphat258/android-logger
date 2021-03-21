@@ -16,7 +16,7 @@ class AndroidLogger {
         val currentTime = Calendar.getInstance().time
         val logMessage = "Thread id: $threadId\tLog time: $currentTime\tMessage: $message\n"
         Log.d("AndroidLogger", logMessage)
-        writeFile(message, applicationContext)
+        writeFile(logMessage, applicationContext)
     }
 
     private fun writeFile(message: String, applicationContext: Application) {
