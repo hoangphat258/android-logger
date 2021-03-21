@@ -1,0 +1,3 @@
+include ':androidlogger'
+include ':app'
+rootProject.name = "AndroidLogger"
